@@ -54,6 +54,8 @@ First line imports the `default` export from `swapi-helper`.
 
 The second line imports from `dom-elements.js` these are not default exports and they are wrapped in the `{` and `}`
 
+While you work on the challenges below use the modules to your advantage. Continue with the pattern used by the existing modules. Add new modules when and if you think they are needed. 
+
 ## Challenges 
 
 The code here could be improved. Take a look at the code. examine it to get comfortable with how it works. 
