@@ -1,10 +1,18 @@
-import getPeople from './swapi-helper.js'
-import { displayEl, formEl, inputID } from './dom-elements.js'
+import {getPeople, getFilms} from './swapi-helper.js'
+import { displayEl, formEl, inputID, personBtn, filmBtn } from './dom-elements.js'
 
-formEl.addEventListener('submit', function(e) {
+personBtn.addEventListener('click', function(e) {
   e.preventDefault()
   const id = inputID.value
-  getPeople(id, display)
+  const person = getPeople(id)
+  person.then(display)
+})
+
+filmBtn.addEventListener('click', function(e) {
+  e.preventDefault()
+  const id = inputID.value
+  const film = getFilms(id)
+  film.then(display)
 })
 
 function display(data) {

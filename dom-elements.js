@@ -1,3 +1,5 @@
 export const displayEl = document.getElementById('display')
 export const formEl = document.querySelector('form')
 export const inputID = document.getElementById('input-id')
+export const personBtn = document.getElementById('personBtn')
+export const filmBtn = document.getElementById('filmBtn')

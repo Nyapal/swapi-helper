@@ -1,15 +1,18 @@
 import { basePath } from './constants.js'
+// getPeople(id, display)
 
-function getPeople(n, success) {
+async function getPeople(n) {
   const path = `${basePath}/people/${n}/`
-  fetch(path).then((res) => {
-    return res.json()
-  }).then((json) => {
-    console.log(json)
-    success(json)
-  }).catch((err) => {
-    console.log(err.message)
-  })
+  const res = await fetch(path)
+  const json = await res.json()
+  return json
 }
 
-export default getPeople
+async function getFilms(n) {
+  const path = `${basePath}/films/${n}/`
+  const res = await fetch(path)
+  const json = await res.json()
+  return json
+}
+
+export {getPeople, getFilms}
